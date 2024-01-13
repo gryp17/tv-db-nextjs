@@ -1,0 +1,46 @@
+.typeahead-search {
+    position: relative;
+
+    &__icon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        color: var(--color-gray-lightest);
+        z-index: 1;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px 10px 10px 40px;
+        color: var(--color-white);
+        background-color: var(--color-gray);
+        border: solid 1px var(--color-gray-light);
+        transition: all 200ms ease-out;
+
+        &:focus {
+            border-color: var(--color-orange);
+        }
+    }
+
+    &__suggestions {
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        list-style: none;
+        padding: 0px;
+    }
+
+    &__item {
+        padding: 10px 5px;
+        background-color: var(--color-gray);
+        color: var(--color-white);
+        cursor: pointer;
+
+        &--selected,
+        &:hover {
+            background-color: var(--color-gray-medium);
+        }
+    }
+}

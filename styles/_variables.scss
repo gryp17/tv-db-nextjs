@@ -1,0 +1,18 @@
+:root {
+    // colors
+    --color-orange: #ff9f51;
+    --color-yellow: #ffff56;
+    --color-black: #1f1f1f;
+    --color-white: #ffffff;
+    --color-gray: #404040;
+    --color-gray-dark: #171717;
+    --color-gray-medium: #595959;
+    --color-gray-light: #8b8b8b;
+    --color-gray-lightest: #cdcdcd;
+
+    // transparent colors
+    --color-gray-transparent: #404040b8;
+
+    --background-color: var(--color-black);
+    --font-color: var(--color-white);
+}
