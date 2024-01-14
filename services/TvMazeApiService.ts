@@ -11,19 +11,36 @@ export async function getShows(query: string): Promise<ShowSearchResult[]> {
 	});
 
 	const res = await fetch(apiUrl('/search/shows?') + params);
-	return await res.json();
+
+	if (!res.ok) {
+		throw new Error(`${res.status} ${res.statusText}`);
+	}
+
+	return res.json();
 }
 
-/*
-export function getRandomShows() {
-	return api.get<Show[]>('/shows');
+export async function getFeaturedShows(): Promise<Show[]> {
+	const res = await fetch(apiUrl('/shows'));
+
+	if (!res.ok) {
+		throw new Error(`${res.status} ${res.statusText}`);
+	}
+
+	return res.json();
 }
 
-export function getShowById(id: ShowId) {
-	return api.get<Show>(`/shows/${id}`, {
-		params: {
-			embed: ['episodes', 'cast', 'images']
-		}
-	});
+export async function getShowById(id: ShowId) {
+	const params = new URLSearchParams([
+		['embed', 'episodes'],
+		['embed', 'cast'],
+		['embed', 'images']
+	]);
+
+	const res = await fetch(apiUrl(`/shows/${id}?`) + params);
+
+	if (!res.ok) {
+		throw new Error(`${res.status} ${res.statusText}`);
+	}
+
+	return res.json();
 }
-*/

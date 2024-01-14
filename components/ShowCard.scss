@@ -1,0 +1,8 @@
+.show-card {
+    transition: all 300ms ease;
+
+    &:hover {
+        filter: saturate(150%);
+        transform: scale(1.05);
+    }
+}
