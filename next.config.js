@@ -3,6 +3,10 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
+	// include those styles in all components
+	sassOptions: {
+		prependData: `@import "@/styles/_breakpoints.scss";`
+	},
 	images: {
 		remotePatterns: [
 			{

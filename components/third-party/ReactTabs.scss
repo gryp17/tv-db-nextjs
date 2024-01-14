@@ -1,0 +1,36 @@
+/* custom styles/override for the react-tabs components */
+
+div[data-rttabs] {
+    border: solid 2px var(--color-orange);
+}
+
+.react-tabs__tab-list {
+    display: flex;
+    background-color: var(--color-orange);
+    border-bottom: none;
+
+    .react-tabs__tab {
+        flex: 1;
+        padding: 10px 15px;
+        color: var(--color-white);
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 0px;
+
+        &:focus {
+            &:after {
+                display: none;
+            }
+        }
+
+        &--selected {
+            background-color: var(--color-black);
+        }
+    }
+}
+
+.react-tabs__tab-panel {
+    padding: 15px;
+}

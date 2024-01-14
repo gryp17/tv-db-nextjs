@@ -1,0 +1,39 @@
+.szh-accordion__item {
+    border-bottom: solid 1px var(--color-gray-light);
+
+    .szh-accordion__arrow {
+        transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+    }
+
+    &--expanded {
+        .szh-accordion__arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .szh-accordion__item-heading {
+        .szh-accordion__item-btn {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px;
+            border-radius: 0px;
+            border: none;
+            background-color: transparent;
+            color: var(--color-white);
+            cursor: pointer;
+        }
+    }
+}
+
+.szh-accordion__item-content {
+    transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+
+    .szh-accordion__item-panel {
+        padding: 12px;
+    }
+}

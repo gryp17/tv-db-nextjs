@@ -1,0 +1,24 @@
+.show-actor {
+    &__inner-wrapper {
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 5px;
+        background-color: var(--color-gray-transparent);
+    }
+
+    &__character-name {
+        margin-top: 3px;
+        font-size: 13px;
+    }
+}

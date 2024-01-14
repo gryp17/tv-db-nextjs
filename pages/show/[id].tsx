@@ -1,5 +1,6 @@
 import React from 'react';
 import ShowNotFound from '@/components/ShowNotFound';
+import ShowInfo from '@/components/show/ShowInfo';
 
 import Head from 'next/head';
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next';
@@ -31,7 +32,7 @@ export default function ShowPage({ show }: InferGetServerSidePropsType<typeof ge
 			<Head>
 				<title>{title}</title>
 			</Head>
-			<main className="show-view">{!show ? <ShowNotFound /> : 'SHOW INFO COMPONENT'}</main>
+			<main className="show-view">{!show ? <ShowNotFound /> : <ShowInfo show={show} />}</main>
 		</>
 	);
 }
