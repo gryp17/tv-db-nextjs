@@ -1,0 +1,12 @@
+.show-not-found {
+    &__icon {
+        display: block;
+        margin: 90px auto 10px auto;
+        font-size: 90px;
+        color: var(--color-orange);
+    }
+
+    &__title {
+        text-align: center;
+    }
+}

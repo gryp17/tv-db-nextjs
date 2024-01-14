@@ -31,9 +31,9 @@ export async function getFeaturedShows(): Promise<Show[]> {
 
 export async function getShowById(id: ShowId) {
 	const params = new URLSearchParams([
-		['embed', 'episodes'],
-		['embed', 'cast'],
-		['embed', 'images']
+		['embed[]', 'episodes'],
+		['embed[]', 'cast'],
+		['embed[]', 'images']
 	]);
 
 	const res = await fetch(apiUrl(`/shows/${id}?`) + params);
